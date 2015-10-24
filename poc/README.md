@@ -10,7 +10,7 @@ Team Project on UG
 6. Download example csv into /tmp folder 'wget http://help.mortardata.com/data/OlympicAthletes.csv'
 7. Execute example commands found in http://help.mortardata.com/technologies/pig/learn_pig
 8. 
-
+//test
 
 
 
