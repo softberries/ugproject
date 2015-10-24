@@ -9,6 +9,6 @@ The aim of this project is to execute some queries against the dataset using som
 Amazon EMR simplifies big data processing, providing a managed Hadoop framework that makes it easy, fast, and cost-effective for you to distribute and process vast amounts of your data across dynamically scalable Amazon EC2 instances.
 Contributors
 
-Krzysztof Grajek
+Krzysztof Grajek <br/>
 Maciej Rudnicki 
 
