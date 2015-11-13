@@ -3,6 +3,12 @@
 ### 1.  As a user I want to build a PoC (Proof Of Concept) application to test the PIG and UDF scripts
 
 ### 2.  As a user I want create a sample data file to be used for testing, research and PoC needs
+#### Tasks:
+* 2.1 Download part date file (9GB) and unpack it
+* 2.2 Create three data file (100MB) 
+* 2.3 Verification difference in created data files
+* 2.4 Push the file on the Dropbox or OneDrive
+* 2.5 Add links to files for repository
 
 ### 3. As a user I want to prepare and run fully working example on Amazon Map Reduce engine
 #### Tasks:
