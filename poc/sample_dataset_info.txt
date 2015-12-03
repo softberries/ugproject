@@ -52,3 +52,11 @@ Example JSON entry as in the original datasource (https://www.reddit.com/r/datas
    "name":"t1_cnasd6x",
    "link_id":"t3_2qyhmp"
 }
+
+There are 54504410 records in the database (sql lite) and it weights 7.9GB (7-zipped)
+
+54504410 - 7900 MB
+x - 100 MB
+
+x = (54504410 * 100) / 7900 = 689929 -> ~700000 records
+To get 100MB we would need to select about 700000 records from the sql lite database and convert them to JSON array
