@@ -1,12 +1,5 @@
 import scala.collection.mutable.ArrayBuffer
 
-object Hello {
-  def main(args: Array[String]): Unit = {
-
-  println("hello, Activator?")
-  }
-}
-
 object CSVDemo3 extends App {
 
   // each row is an array of strings (the columns in the csv file)
