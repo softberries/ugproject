@@ -20,3 +20,9 @@ project/plugins/project/
 .idea/
 *.iml
 
+# SampleData project
+SampleData/.idea/
+SampleData/*.iml
+SampleData/.idea_modules/
+SampleData/projectFilesBackup/*
+
