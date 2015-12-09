@@ -13,11 +13,11 @@ object Application extends StrictLogging {
     // 1. Read csv into a list of Reddit objects
     val redditObjects: List[RedditComment] = new CSVParser().parseFile(new File(csvFilePath))
     // 2. Convert the list of Reddit object to JSON array
-    val json: JsArray = new JSONFactory().createJSONObject(redditObjects)
+    //val json: JsArray = new JSONFactory().createJSONObject(redditObjects)
     // 3. Save the JSON array to a file
-    new PrintWriter(jsonFilePath) {
-      write(json.toString); close
-    }
+    //new PrintWriter(jsonFilePath) {
+    //  write(json.toString); close
+    //}
     logger.debug("finished.")
   }
 }
