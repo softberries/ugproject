@@ -5,8 +5,8 @@ package scala.ug.gda.pl.engine
  */
 object Constans {
 
-    final val source:String = getClass.getResource("/someText.txt").getFile
-
+    final val source:String = //getClass.getResource("/someText.txt").getFile
+        getClass.getResource("/sourceJoeMonsterToFindGif").getFile
     final var GIF:String = ".gif"
 
 }

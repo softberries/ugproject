@@ -10,31 +10,40 @@ import scala.reflect.internal.util.StringOps
  */
 object EngineComponents {
 
-  def printGifList(gifList: List[String]) {
+  def printGifList(gifList: List[Gif]) {
     println("START")
-    gifList.foreach(gif => println(gif))
+    gifList.foreach(gif => println(gif.toString))
     println("\nEND")
   }
 
-  def generateGifsList(): List[String] = {
+  def generateGifsList(): List[Gif] = {
     val bufferedReader = new BufferedReader(new FileReader(Constans.source))
     var line: String = ""
 
-    val listTemp = new ListBuffer[String]()
+    val listTemp = new ListBuffer[Gif]()
     while ( {
       line = bufferedReader.readLine(); line != null
     }) {
       val wordList: List[String] = StringOps.words(line)
       wordList.foreach(word => filter(word, listTemp))
+
     }
     return listTemp.toList
   }
 
 
-  def filter(word: String, listOfGift: ListBuffer[String]) {
-    if (word.contains(Constans.GIF)) {
-      listOfGift += (word)
+  def filter(link: String, listOfGift: ListBuffer[Gif]) {
+    if (link.contains(Constans.GIF)) {
+      val gifName = getNameOfGif(link)
+      listOfGift += new Gif(gifName,link)
     }
   }
-
+  def getNameOfGif(link:String) : String = {
+    val words:Array[String]  = link.split("/")
+    var name:String=""
+    for(word <- words){
+      if(word.contains(Constans.GIF)) name= word
+    }
+    return name
+  }
 }
