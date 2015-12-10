@@ -23,3 +23,10 @@ case class RedditComment(
                           controversiality: String,
                           parent_id: String
                         )
+
+
+object RedditComment {
+  def apply(arr: Array[String]): RedditComment = {
+    RedditComment(arr(0), "etc...", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
+  }
+}

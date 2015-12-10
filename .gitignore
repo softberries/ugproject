@@ -22,6 +22,8 @@ project/plugins/project/
 
 # SampleData project
 SampleData/.idea/
+SampleData/.idea/workspace.xml
+SampleData/.idea/misc.xml
 SampleData/*.iml
 SampleData/.idea_modules/
 SampleData/projectFilesBackup/*
