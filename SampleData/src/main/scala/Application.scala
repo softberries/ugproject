@@ -1,23 +1,26 @@
 import java.io.{PrintWriter, File}
-
 import com.typesafe.scalalogging.StrictLogging
-import play.api.libs.json.JsArray
+import play.api.libs.json.{JsValue}
+import play.libs.Json
 
 object Application extends StrictLogging {
 
-  val csvFilePath = ""
-  val jsonFilePath = ""
+  val csvFilePath = "sample_data.csv"
+  val jsonFilePath = "sample_json_data.json"
+  val rand = new scala.util.Random
 
   def main(args: Array[String]): Unit = {
     logger.debug("Starting application..")
     // 1. Read csv into a list of Reddit objects
     val redditObjects: List[RedditComment] = new CSVParser().parseFile(new File(csvFilePath))
+    logger.info("Testing random comment: " + redditObjects(rand.nextInt(100)).body)
     // 2. Convert the list of Reddit object to JSON array
-    //val json: JsArray = new JSONFactory().createJSONObject(redditObjects)
+    val json: JsValue = new JSONFactory().createJSONObject(redditObjects)
+    logger.info("Testing another comment: " + json(rand.nextInt(100)).\("body"))
     // 3. Save the JSON array to a file
-    //new PrintWriter(jsonFilePath) {
-    //  write(json.toString); close
-    //}
+    new PrintWriter(jsonFilePath) {
+      write(json.toString()); close
+    }
     logger.debug("finished.")
   }
 }
