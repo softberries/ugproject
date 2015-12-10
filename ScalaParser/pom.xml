@@ -6,7 +6,7 @@
 
     <groupId>groupId</groupId>
     <artifactId>ScalaParser</artifactId>
-    <version>1.0</version>
+    <version>1.3</version>
 
     <properties>
         <maven.compiler.source>1.5</maven.compiler.source>
@@ -16,6 +16,19 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.typesafe.scala-logging</groupId>
+            <artifactId>scala-logging_2.11</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jcl</artifactId>
+            <version>1.7.13</version>
+        </dependency>
+
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
