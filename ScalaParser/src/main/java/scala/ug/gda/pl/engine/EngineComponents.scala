@@ -36,6 +36,9 @@ object EngineComponents {
       line != null
     }) {
       val wordList: List[String] = StringOps.words(line)
+
+      wordList.map(s => new Gif(getNameOfGif(s),s))
+
       wordList.foreach(word => filter(word, listTemp))
 
     }

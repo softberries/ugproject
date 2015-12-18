@@ -5,8 +5,8 @@ import play.libs.Json
 
 object Application extends StrictLogging {
 
-  val csvFilePath = "sample_data.csv"
-  val jsonFilePath = "sample_json_data.json"
+  val csvFilePath = "/Users/kris/Documents/Studia/projektgrupowy/ugproject/SampleData/src/test/resources/sample_data_100_records.csv"
+  val jsonFilePath = "/Users/kris/Documents/Studia/projektgrupowy/ugproject/SampleData/src/test/resources/sample_json_data.json"
   val rand = new scala.util.Random
 
   def main(args: Array[String]): Unit = {

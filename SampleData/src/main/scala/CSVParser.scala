@@ -13,6 +13,4 @@ class CSVParser extends StrictLogging {
     logger.info("entries " + myEntries.size)
     myEntries.collect { case e if e.length == PROPER_NR_OF_ELEMENTS => RedditComment(e) }
   }
-
-
 }
