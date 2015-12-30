@@ -21,7 +21,7 @@ class ImgUrlCountSpec extends FunSpec {
       com.twitter.scalding.Tool.main(Array(
         "ImgUrlCount", "--local", "--input", file.getAbsolutePath(), "--output", output))
 
-      val expected = sampleJsonUrlCountExpected.map{ case (url, count) => s"$url\t$count" }
+      val expected = sampleJsonUrlCountExpected.map{ case (url, utcdate, count) => s"$url\t$utcdate\t$count" }
       assert (expected.size == 3)
     }
   }

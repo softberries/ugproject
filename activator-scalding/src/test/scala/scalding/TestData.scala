@@ -40,7 +40,7 @@ The rich developer content in Typesafe Activator is dynamic and customizable. Ne
   """.stripMargin
 
   val sampleJsonUrlCountExpected = List(
-    ("http://i.imgur.com/gKoR38B.png", 3),
-    ("http://i.imgur.com/e1rmqnp.gif", 2),
-    ("http://i.imgur.com/vqMOTbo.gif", 1))
+    ("http://i.imgur.com/gKoR38B.png", "2015-05", 3),
+    ("http://i.imgur.com/e1rmqnp.gif", "2015-05", 2),
+    ("http://i.imgur.com/vqMOTbo.gif", "2015-05", 1))
 }

@@ -1,3 +1,5 @@
+package com.softwarepassion.scalding.emr
+
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -25,28 +27,7 @@ class ImgUrlCount(args: Args) extends Job(args) {
     }
     .groupBy('imgurl, 'year) { group => group.size('count) }
     .groupAll {
-    _.sortBy('count).reverse
-  }
-  .write(Tsv(args("output")))
-}
-
-
-/**
-  * Run this example, using default arguments if none are specified.
-  */
-object ImgUrlCount {
-  val name = "ImgUrlCount"
-  val message = "Find and count all the image urls in sample_json_data.json file."
-
-  def main(args: Array[String]) {
-    if (args.length != 0) {
-      Run.run(name, message, args)
-    } else {
-      Run.run(name, message,
-        Array("--local",
-          "--input", "data/sample_json_data.json",
-          "--output", "output/kjv-imageurl.txt"))
-      Run.printSomeOutput("output/kjv-imageurl.txt")
+      _.sortBy('count).reverse
     }
-  }
+    .write(Tsv(args("output")))
 }

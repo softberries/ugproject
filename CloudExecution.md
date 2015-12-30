@@ -108,6 +108,16 @@ aws s3 ls s3://grajo001/ | awk 'BEGIN {total=0}{total+=$3}END{print total/1024/1
 
 ## Scalding jar and scripts preparation
 
+Scalding job example output:
+
+```sh
+http://i.imgur.com/gKoR38B.png	2015-05	2
+http://i.imgur.com/vqMOTbo.gif	2015-05	1
+http://i.imgur.com/wsg34MB.jpg	2015-05	1
+https://i.imgur.com/QBMh4fq.jpg	2015-05	1
+https://i.imgur.com/snLplqq.jpg	2015-05	1
+```
+
 1. Copy necessary jars to Amazon S3
 2. Create a basic shell script to start up the cluster with proper arguments
 
