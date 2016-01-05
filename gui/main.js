@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function() {
-    EUKW.init();
+    UG.init();
 });
 
 UG = {
